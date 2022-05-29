@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var geolocation = window.navigator.geolocation;
+
+        function show(){
+            if( geolocation){
+                alert("your browser support geolocation")
+            } else{
+                document.write("your browser does not support geolocation")
+            }
+        }
+    </script>
+
+<input type="button" value="click her to know" onclick="show()">
+
+</body>
+</html>

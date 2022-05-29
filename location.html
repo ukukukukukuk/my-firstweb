@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>get my location</title>
+
+    <script>
+
+        function geolocation(){
+
+            if(navigator.geolocation){
+                navigator.geolocation.getCurrentPosition(showposition);
+            }
+            else{
+                alert("geolocation is not support in your browser.");
+            }
+        }
+        function showposition (position) {
+
+            alert(`latitude:` +position.coord.latitude+`\n`+ `logitude:`+ position.coord.logitude );
+        }
+
+    </script>
+
+
+</head>
+<body>
+    <input type="button" value="display location" onclick="geolocation()"/>
+</body>
+</html>
